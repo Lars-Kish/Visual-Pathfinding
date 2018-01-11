@@ -6,25 +6,16 @@
 //bfs
 
 import java.util.Random;
-Node[] nodes;
-int numPoints = 25;
-int dim = 600;
+int numPoints = 25, graphDim = 600;
+Graph graph1;
 
-void setup(){
-  size(600,600);
-  Random rand = new Random();
-  nodes = new Node[numPoints];
-  
-  for(int i =0;i<numPoints;i++){
-    int randx=rand.nextInt(int(dim*.7))+int(dim*.3);
-    int randy=rand.nextInt(int(dim*.7))+int(dim*.3);
-    nodes[i] = new Node(randx,randy,15);
-  }
+
+void setup() {
+  size(600, 600);
+  graph1 = new Graph(numPoints, graphDim);
+  graph1.createPoints();
 }
 
-void draw(){ 
-  for(int i =0; i<numPoints-1;i++){
-   nodes[i].drawNode();
-  }
-  
+void draw() { 
+  graph1.drawGraph();
 }

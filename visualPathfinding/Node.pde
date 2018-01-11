@@ -9,6 +9,7 @@ class Node {
    this.x = x;
    this.y = y;
    this.size = size;
+   this.clr = color(0,0,0);
   }
   
   Node(int x,int y,int size,color clr){
