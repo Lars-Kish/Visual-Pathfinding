@@ -6,13 +6,13 @@
 //bfs
 
 import java.util.Random;
-int numPoints = 25, graphDim = 600;
+int numPoints = 10, graphDim = 800;
 Graph graph1;
-
+float den = .2;
 
 void setup() {
-  size(600, 600);
-  graph1 = new Graph(numPoints, graphDim);
+  size(800, 800);
+  graph1 = new Graph(numPoints, graphDim,den);
   graph1.createPoints();
 }
 
